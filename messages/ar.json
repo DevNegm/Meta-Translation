@@ -1,0 +1,37 @@
+{
+  "main": {
+    "home": "الرئيسية",
+    "clients": "عملائنا",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "themes": "الثيمات",
+    "contact": "تواصل معنا",
+    "button": "ابدأ الآن",
+    "name": "الاسم",
+    "email": "البريد الالكتروني",
+    "phone": "رقم الهاتف",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "ارسل الرسالة",
+    "footer_title": "معلومات عنا",
+    "site_links": "روابط الموقع",
+    "languages": "اللغات",
+    "visit_us": "زورنا",
+    "contact_us": "تواصل معنا",
+    "call_us": "اتصل بنا",
+    "services-s": "خدماتنا",
+    "clients-s": "عملاءنا",
+    "toast_success_title": "تم ارسال الرسالة بنجاح",
+    "toast_success_desc": "تم ارسال الرسالة بنجاح",
+    "toast_error_title": "حدث خطأ",
+    "toast_error_desc": "حدث خطأ في ارسال الرسالة",
+    "name_req": "الاسم مطلوب",
+    "email_req": "البريد الالكتروني مطلوب",
+    "email_invalid": "البريد الالكتروني غير صحيح",
+    "phone_req": "رقم الهاتف مطلوب",
+    "subject_req": "الموضوع مطلوب",
+    "message_req": "الرسالة مطلوبة"
+  }
+
+  
+}
