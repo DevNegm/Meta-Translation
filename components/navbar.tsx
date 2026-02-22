@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
                 <div className='hidden lg:flex items-center gap-4'>
                     {Links?.map((link) => (
-                        <Button variant={'ghost'} className={`cursor-pointer ${active === link?.id ? "bg-accent" : ""}`} onClick={() => handleLink(link?.id, 80)}>{link?.[`name_${locale}`]}</Button>
+                        <Button key={link?.id} variant={'ghost'} className={`cursor-pointer ${active === link?.id ? "bg-accent" : ""}`} onClick={() => handleLink(link?.id, 80)}>{link?.[`name_${locale}`]}</Button>
                     ))}
                 </div>
 

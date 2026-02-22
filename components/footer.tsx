@@ -21,7 +21,7 @@ const Footer = ({ data }: any) => {
                     <p className='text-zinc-200'>{data?.contact?.[`footer_${locale}`]}</p>
                     <div className='flex items-center gap-2'>
                         {data?.contact?.socialmedia?.map((el: any) => (
-                            <Link href={el?.url} className='w-10 h-10 flex items-center justify-center bg-[#2F3032] rounded-full'>
+                            <Link key={`footer_${el?.id}`} href={el?.url} className='w-10 h-10 flex items-center justify-center bg-[#2F3032] rounded-full'>
                                 <img src={el?.image} className='w-4 h-4 object-contain' alt="Social Media" />
                             </Link>
                         ))}
@@ -31,7 +31,7 @@ const Footer = ({ data }: any) => {
                 <div className='flex flex-col gap-4'>
                     <p className='text-xl font-bold'>{t('site_links')}</p>
                     {Links.map((item) => (
-                        <button className='flex cursor-pointer text-zinc-300' key={item.id} onClick={() => scrollTo(item?.id, 80)}>
+                        <button className='flex cursor-pointer text-zinc-300' key={`link-${item?.id}`} onClick={() => scrollTo(item?.id, 80)}>
                             {item?.[`name_${locale}`]}
                         </button>
                     ))}
