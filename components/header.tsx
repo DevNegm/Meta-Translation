@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { Button } from './ui/button'
 import { motion } from 'framer-motion'
-import { containerVariants, itemVariants } from '@/lib/utils'
+import { containerVariants, itemVariants, scrollTo } from '@/lib/utils'
 
 const Header = ({ data }: any) => {
     const locale = useLocale()
@@ -14,7 +14,7 @@ const Header = ({ data }: any) => {
                 <motion.h3 variants={itemVariants} className='text-2xl  lg:text-4xl font-bold text-white'>{data?.header?.[`title_${locale}`]}</motion.h3>
                 <motion.p variants={itemVariants} className='text-white'>{data?.header?.[`sub_${locale}`]}</motion.p>
                 <motion.p variants={itemVariants} className='text-white'>{data?.header?.[`desc_${locale}`]}</motion.p>
-                <Button className='w-fit rounded-full font-semibold mt-5 px-5 custom-btn'>{t('button')}</Button>
+                <Button onClick={() =>  scrollTo('about', 80)} className='w-fit rounded-full font-semibold mt-5 px-5 custom-btn'>{t('button')}</Button>
             </motion.div>
         </header>
     )
