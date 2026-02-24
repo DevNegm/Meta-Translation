@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col lg:gap-40 gap-20 relative">
-      <Navbar />
+      <Navbar data={data} />
       <Header data={data} />
       <About data={data} />
       <Services data={data} />
