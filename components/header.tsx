@@ -8,7 +8,7 @@ const Header = ({ data }: any) => {
     const t = useTranslations('main');
 
     return (
-        <header id='home' className='min-h-[75vh] h-full py-5 flex items-center pt-16 relative mt-25 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url(${data?.header?.image})` }}>
+        <header id='home' className='min-h-[75vh] h-full py-5 flex items-center pt-16 relative mt-20 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url(${data?.header?.image})` }}>
             <div className='bg-black/50 absolute inset-0 w-full h-full' />
             <motion.div variants={containerVariants} initial="hidden" whileInView="show" className='max-w-350 w-[90%] mx-auto flex flex-col justify-center gap-4 relative'>
                 <motion.h3 variants={itemVariants} className='text-2xl  lg:text-4xl font-bold text-white'>{data?.header?.[`title_${locale}`]}</motion.h3>

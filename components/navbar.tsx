@@ -41,7 +41,7 @@ const Navbar = ({data}:any) => {
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className='fixed top-0 z-50 w-full flex flex-col justify-center items-center backdrop-blur  bg-background/75'
         >
-            <div className='max-w-350 w-[90%] mx-auto py-4 flex items-center justify-between'>
+            <div className='max-w-350 w-[90%] mx-auto py-1.25 flex items-center justify-between'>
                 <div className='lg:w-50 cursor-pointer'  onClick={() => handleLink('home', 80)}>
                     <img src={data?.logo} className='lg:w-40 w-20' alt='meta' />
                 </div>
