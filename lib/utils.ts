@@ -34,16 +34,17 @@ export const Links = [
     name_ar: "ما نقدمه",
     id: "services",
   },
+   {
+    name_en: "Our Services",
+    name_ar: "خدماتنا",
+    id: "ourservices",
+  },
   {
     name_en: "Clients",
     name_ar: "عملاءنا",
     id: "clients",
   },
-  {
-    name_en: "Why Us",
-    name_ar: "لماذا نحن",
-    id: "whyus",
-  },
+ 
 ];
 
 export function getYoutubeEmbedUrl(url: string): string {
