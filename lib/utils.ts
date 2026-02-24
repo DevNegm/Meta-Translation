@@ -30,8 +30,8 @@ export const Links = [
     id: "about",
   },
   {
-    name_en: "Services",
-    name_ar: "خدماتنا",
+    name_en: "What We Offer",
+    name_ar: "ما نقدمه",
     id: "services",
   },
   {

@@ -6,6 +6,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Navbar from "@/components/navbar";
+import Service from "@/components/service";
 import Services from "@/components/services";
 import Team from "@/components/team";
 import Video from "@/components/video";
@@ -45,6 +46,7 @@ export default function Home() {
       <Header data={data} />
       <About data={data} />
       <Services data={data} />
+      <Service data={data} />
       <Clients data={data} />
       <Work data={data} />
       <Team data={data} />
