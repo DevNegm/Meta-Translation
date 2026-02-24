@@ -43,7 +43,7 @@ const Navbar = () => {
         >
             <div className='max-w-350 w-[90%] mx-auto py-4 flex items-center justify-between'>
                 <div className='lg:w-50 cursor-pointer'  onClick={() => handleLink('home', 80)}>
-                    <img src={'/logo.png'} className='w-20' alt='meta' />
+                    <img src={'/logo.png'} className='lg:w-40 w-20' alt='meta' />
                 </div>
                 <div className='hidden lg:flex items-center gap-4'>
                     {Links?.map((link) => (

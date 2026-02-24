@@ -8,40 +8,44 @@ const Footer = ({ data }: any) => {
     const locale = useLocale() as "en" | "ar"
     const router = useRouter()
     const pathname = usePathname()
-        const t = useTranslations('main')
-    
+    const t = useTranslations('main')
+
     const switchLanguage = (nextLocale: "en" | "ar") => {
         router.push(pathname, { locale: nextLocale })
     }
     return (
         <footer className='flex flex-col gap-10 py-10 bg-[#252628] text-white'>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 max-w-350 w-[90%] mx-auto '>
-                <div className='flex flex-col gap-4'>
-                    <p className='text-xl font-bold'>{t('footer_title')}</p>
-                    <p className='text-zinc-200'>{data?.contact?.[`footer_${locale}`]}</p>
-                    <div className='flex items-center gap-2'>
-                        {data?.contact?.socialmedia?.map((el: any) => (
-                            <Link key={`footer_${el?.id}`} href={el?.url} className='w-10 h-10 flex items-center justify-center bg-[#2F3032] rounded-full'>
-                                <img src={el?.image} className='w-4 h-4 object-contain' alt="Social Media" />
-                            </Link>
-                        ))}
-
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 max-w-6xl w-[90%] mx-auto '>
+                <div className='flex flex-col jusctify-center items-center'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='text-xl font-bold'>{t('footer_title')}</p>
+                        <p className='text-zinc-200'>{data?.contact?.[`footer_${locale}`]}</p>
+                        <div className='flex items-center gap-2'>
+                            {data?.contact?.socialmedia?.map((el: any) => (
+                                <Link key={`footer_${el?.id}`} href={el?.url} className='w-10 h-10 flex items-center justify-center bg-[#2F3032] rounded-full'>
+                                    <img src={el?.image} className='w-4 h-4 object-contain' alt="Social Media" />
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                    <p className='text-xl font-bold'>{t('site_links')}</p>
-                    {Links.map((item) => (
-                        <button className='flex cursor-pointer text-zinc-300' key={`link-${item?.id}`} onClick={() => scrollTo(item?.id, 80)}>
-                            {item?.[`name_${locale}`]}
-                        </button>
-                    ))}
+                <div className='flex flex-col jusctify-center lg:items-center'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='text-xl font-bold'>{t('site_links')}</p>
+                        {Links.map((item) => (
+                            <button className='flex cursor-pointer text-zinc-300' key={`link-${item?.id}`} onClick={() => scrollTo(item?.id, 80)}>
+                                {item?.[`name_${locale}`]}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                    <p className='text-xl font-bold'>{t('languages')}</p>
-                    <button onClick={() => switchLanguage('en')} className='w-fit cursor-pointer font-semibold text-zinc-300'>{"English"}</button>
-                    <button onClick={() => switchLanguage('ar')} className='w-fit cursor-pointer font-semibold text-zinc-300'>{"العربية"}</button>
+                <div className='flex flex-col jusctify-center lg:items-center'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='text-xl font-bold'>{t('languages')}</p>
+                        <button onClick={() => switchLanguage('en')} className='w-fit cursor-pointer font-semibold text-zinc-300'>{"English"}</button>
+                        <button onClick={() => switchLanguage('ar')} className='w-fit cursor-pointer font-semibold text-zinc-300'>{"العربية"}</button>
+                    </div>
                 </div>
-
             </div>
             <div className="w-full max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3">
@@ -87,9 +91,7 @@ const Footer = ({ data }: any) => {
             </div>
             <div className='flex items-center justify-center'>
                 <p>@ {new Date().getFullYear()} All Rights Reserved</p>
-
             </div>
-
         </footer>
     )
 }
