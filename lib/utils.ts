@@ -47,6 +47,12 @@ export const Links = [
  
 ];
 
+export const showIcon = (index: number) => {
+  if (index === 0) return '/price-tag.png';
+  if (index === 1) return '/quality.png';
+  if (index === 2) return '/timing.png';
+}
+
 export function getYoutubeEmbedUrl(url: string): string {
   if (!url) return "";
 

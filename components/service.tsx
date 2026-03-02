@@ -20,7 +20,7 @@ const Service = ({ data }: any) => {
                         <motion.p variants={itemVariants}>{data?.our_service?.[`note_desc_${locale}`]}</motion.p>
                     </motion.div>
                 </motion.div>
-                <motion.img variants={imageVariants} src={data?.our_service?.image} className='w-full max-w-175 bg-zinc-700 rounded-2xl' alt={data?.our_service?.[`title_${locale}`]} />
+                <motion.img variants={imageVariants} src={data?.our_service?.image ?? '/ex.jpg'} className='w-full max-w-175 bg-zinc-700 rounded-2xl' alt={data?.our_service?.[`title_${locale}`]} />
             </motion.div>
         </motion.section>
     )

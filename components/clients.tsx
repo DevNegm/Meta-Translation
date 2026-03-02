@@ -10,7 +10,7 @@ const Clients = ({ data }: any) => {
             <motion.div variants={containerVariants} initial="hidden" whileInView="show" className='flex lg:flex-row justify-center flex-wrap gap-5'>
                 {data?.clients?.map((client: any, index: number) => (
                     <Link href={client?.url ?? ''} key={index} className='lg:w-[calc(15%-20px)] md:w-[calc(25%-20px)] w-[calc(50%-20px)] aspect-square'>
-                        <motion.img variants={imageVariants} src={client?.image} className='w-full h-full rounded-2xl object-cover' alt="client" />
+                        <motion.img variants={imageVariants} src={client?.image ?? '/ex.jpg'} className='w-full h-full rounded-2xl object-cover' alt="client" />
                     </Link>
                 ))}
             </motion.div>

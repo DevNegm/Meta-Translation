@@ -6,7 +6,7 @@ const Work = ({ data }: any) => {
     return (
         <section id='whyus' dir='ltr' className='min-h-screen flex items-center relative'>
             <motion.div variants={containerVariants} initial="hidden" whileInView="show" className='max-w-350 w-[90%]  mx-auto flex lg:flex-row flex-col items-center gap-5 relative z-10'>
-                <motion.img variants={imageVariants} src={data?.work?.image} className='w-full max-w-175 rounded-2xl' alt={data?.about?.[`title_${locale}`]} />
+                <motion.img variants={imageVariants} src={data?.work?.image ?? '/ex.jpg'} className='w-full max-w-175 rounded-2xl' alt={data?.about?.[`title_${locale}`]} />
                 <motion.div variants={containerVariants} initial="hidden" whileInView="show" className='flex flex-col gap-5 w-full'>
                     <motion.h3 variants={itemVariants} className='lg:text-3xl text-2xl font-bold'>{data?.work?.[`title_${locale}`]}</motion.h3>
                     <motion.h3 variants={itemVariants} className='lg:text-2xl text-xl font-bold'>{data?.work?.[`title2_${locale}`]}</motion.h3>
